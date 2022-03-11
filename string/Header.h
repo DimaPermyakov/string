@@ -5,13 +5,13 @@
 #include <cstddef>
 #include <iostream>
 
-
 class String {
 public:
 	~String();
 	String();
 	String(const String& rhs);
 	String(const char* data);
+	String(const size_t& StrSize);
 	size_t Find(const String& substr) const;
 	size_t Find(const char* substr) const;
 	void Replace(char oldSymbol, char newSymbol);
@@ -30,7 +30,6 @@ public:
 	char operator[](size_t index) const;
 	char& operator[](size_t index);
 	friend std::ostream& operator<<(std::ostream&, const String&);
-
 private:
 	char* Data{};
 };
