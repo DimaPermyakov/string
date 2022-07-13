@@ -1,9 +1,7 @@
 // Copyright 2022 Dmitriy <dimapermyakov55@gmail.com>
 #include "Header.h"
-String::String() {
-    Data = new char[1];
-    Data[0] = '\0';
-}
+
+String::String() : Data(nullptr) {}
 String::String(const size_t& StrSize) {
     Data = new char[StrSize + 1];
 }
